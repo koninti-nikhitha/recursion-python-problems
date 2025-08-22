@@ -1,0 +1,61 @@
+#reverse the array by recursion 
+'''def fun(l,r):
+    if(l>=r):
+        return
+    a[l],a[r]=a[r],a[l]
+    fun(l+1,r-1)
+a=[2,3,4,5,6]
+n=len(a)
+print(fun(0,n-1))
+print(a)'''
+
+#by using one pointer
+'''def fun(i):
+    if i>n//2:
+        return
+    a[i], a[n-i-1] = a[n-i-1], a[i] 
+    fun(i+1)
+a=[1,2,3,4,5]
+n=len(a)
+fun(0)
+print(a)'''
+
+# check it is palindrome
+
+'''def fun(i):
+    if (i>=n//2):
+        return True
+    if a[i]!=a[n-i-1]:
+        return False
+    return fun(i+1)
+a="mada"
+n=len(a)
+
+
+print(fun(0))'''
+
+
+
+
+
+'''def reverse_list(a, l, r):
+    if l >= r:
+        return
+    a[l], a[r] = a[r], a[l]   # swap
+    reverse_list(a, l+1, r-1) # recurse inward
+
+a = [1, 2, 3, 4, 5]
+reverse_list(a, 0, len(a)-1)
+print(a)'''
+
+#checking fabinacci
+
+def fab(n):
+    if(n<=1):
+        return n
+    last=fab(n-1)
+    slast=fab(n-2)
+    return last+slast
+n=5
+print(fab(n))
+

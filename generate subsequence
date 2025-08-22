@@ -1,0 +1,16 @@
+def generate(ind,nums,curr_subset,ans):
+    if(ind==len(nums)):
+        ans.append(curr_subset.copy())
+        return 
+    curr_subset.append(nums[ind])
+    generate(ind+1,nums,curr_subset,ans)
+    curr_subset.pop()
+    generate(ind+1,nums,curr_subset,ans)
+def subsequence(nums):
+    ans=[]
+    curr_subset=[]
+    ind=0
+    generate(ind,nums,curr_subset,ans)
+    return ans
+nums=[3,1,2]
+print(subsequence(nums))

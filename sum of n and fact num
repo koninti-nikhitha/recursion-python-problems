@@ -1,0 +1,25 @@
+'''# sum of n numbers
+def fun(i,sum):
+    if(i<1):
+        print(sum)
+        return
+    fun(i-1,sum+i)
+fun(3,0)'''
+# another method
+'''def fun(n):
+    if n==0:
+        return 0
+    return n+fun(n-1)
+print(fun(3))'''
+# factorial of a number
+def fun(n):
+    if n==0:
+        return 1
+    return(n*fun(n-1))
+print(fun(3))
+
+
+
+
+
+
